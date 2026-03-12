@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: Config-Client-Service
+  config:
+    import: optional:configserver:http://localhost:8897
+
+server:
+  port: 7993
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
